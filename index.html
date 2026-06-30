@@ -1,30 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Black Background Website</title>
-    <style>
-        /* This changes the entire page background */
-        body {
-            background-color: #000000; 
-            color: #ffffff; /* White text for contrast */
-            font-family: Arial, sans-serif;
-            text-align: center;
-            margin: 0;
-            padding: 50px;
-        }
+<meta charset="UTF-8">
+<title>Centered Image Layout</title>
+<style>
+  /* Black background for the whole page */
+  body {
+    background-color: black;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+  }
 
-        /* This changes the heading color */
-        h1 {
-            color: #ffcc00; /* Yellow accent color */
-        }
-    </style>
+  /* Top half container */
+  .top-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end; /* Push the image towards the middle line */
+    padding-bottom: 5vh;
+  }
+
+  /* Bottom half container */
+  .bottom-section {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Push the links towards the middle line */
+    gap: 30px; /* Space between the two link images */
+    padding-top: 5vh;
+  }
+
+  /* Styling for all images to fit nicely */
+  img {
+    max-width: 300px;
+    height: auto;
+    display: block;
+  }
+</style>
 </head>
 <body>
 
-    <h1>Welcome to My Website</h1>
-    <p>This is a basic website with a black background and white text.</p>
+  <!-- Top Half Image -->
+  <div class="top-section">
+    <img src="https://64.media.tumblr.com/b23fc5bed1082ff94c1af096de8d8e7c/dd3d8846d71b0d5a-0c/s640x960/08f20f222b548cb94ea0bbddc1ab18e58bdb06f0.jpg" alt="Featured Rectangle"width="300" height="145">
+  </div>
+
+  <!-- Bottom Half Image Links -->
+  <div class="bottom-section">
+    <a href="  ">
+      <img src="https://64.media.tumblr.com/64c8657fb450aeb88c545205b5852a1e/dd3d8846d71b0d5a-23/s640x960/07bbe85b624b3ca6d0069ca8fa76d091d8914724.pnj" alt="First Link" width="200" height="101">
+    </a>
+    <a href="https://example.org">
+      <img src="https://64.media.tumblr.com/8ae14b117451542cbb95f63485ab81d8/dd3d8846d71b0d5a-f8/s640x960/4983c519ec5d5bcb171ac848ab80a834a35e0838.pnj" alt="Second Link"width="200" height="101">
+    </a>
+  </div>
 
 </body>
 </html>
